@@ -7,7 +7,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
 
-:root{--bg:#f3f5ef;--card:#fff;--text:#202820;--primary:#237548;--light:#e5f3e9;--border:#dce5dc;--shadow:rgba(0,0,0,.08)}body.dark{--bg:#101914;--card:#1b2921;--text:#edf5ed;--primary:#65c98c;--light:#294535;--border:#34463a;--shadow:rgba(0,0,0,.3)}*{box-sizing:border-box;margin:0;padding:0}body{font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);padding:14px;transition:.2s}button,input,select{font:inherit}.container{max-width:900px;margin:auto}.page{display:none}.page.active{display:block;animation:fade .2s}@keyframes fade{from{opacity:.5}to{opacity:1}}.header{text-align:center;padding:28px 10px}.logo{font-size:48px;margin-bottom:10px}.header h1{font-size:27px;color:var(--primary);margin-bottom:10px}.header p,.muted{font-size:13px;opacity:.7}.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px;margin-bottom:15px;box-shadow:0 4px 15px var(--shadow)}.btn{width:100%;padding:15px;border:0;border-radius:13px;background:var(--primary);color:white;font-weight:bold;margin:5px 0;cursor:pointer}.btn.secondary{background:transparent;color:var(--primary);border:1.5px solid var(--primary)}.btn.small{width:auto;padding:9px 12px;font-size:13px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0 18px}.topbar h2{font-size:21px;color:var(--primary)}.back{padding:9px 12px;border-radius:10px;border:1px solid var(--primary);background:var(--card);color:var(--primary);font-weight:bold;cursor:pointer}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.row>*{flex:1}.search,select{width:100%;padding:13px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text)}.surah-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:9px;margin-top:12px}.surah-item{display:flex;align-items:center;gap:10px;text-align:right;padding:13px;border:1px solid var(--border);border-radius:12px;background:var(--card);color:var(--text);cursor:pointer}.surah-item:active{background:var(--light)}.surah-num{width:34px;height:34px;border-radius:50%;background:var(--light);color:var(--primary);display:grid;place-items:center;font-size:13px;flex-shrink:0}.surah-meta{font-size:11px;opacity:.65;margin-top:4px}.surah-title{text-align:center;color:var(--primary);font-size:24px;margin:18px 0}.bismillah{text-align:center;font-size:25px;line-height:2;margin:14px 0}.quran-text{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px;line-height:2.5;max-height:58vh;overflow:auto}.ayah{display:inline;border-radius:7px;padding:3px;transition:.2s;cursor:pointer;-webkit-tap-highlight-color:rgba(35,117,72,.18);touch-action:manipulation}.ayah.active{background:var(--light);outline:2px solid var(--primary)}.ayah-number{display:inline-grid;place-items:center;width:29px;height:29px;border-radius:50%;background:var(--primary);color:white;font-size:12px;margin:0 5px;vertical-align:middle;cursor:pointer}.ayah-number.active{background:#e99a22}.translation,.tafsir{display:none;background:var(--light);border-radius:10px;padding:10px 12px;margin:6px 0 12px;font-size:15px;line-height:2.1;white-space:normal}.translation.show,.tafsir.show{display:block}.translation small,.tafsir small{display:block;font-size:11px;opacity:.7;margin-top:5px}.ayah-tools{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}.player{position:fixed;left:14px;right:14px;bottom:10px;width:calc(100% - 28px);max-width:872px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:17px;padding:10px 13px 13px;box-shadow:0 4px 20px var(--shadow);z-index:30;transition:transform .28s ease;touch-action:pan-y}.player.collapsed{transform:translateY(calc(100% - 23px))}.player-handle{height:17px;width:100%;display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:none;margin:-5px 0 5px}.player-handle:after{content:"";width:48px;height:5px;border-radius:8px;background:var(--border);border:1px solid var(--primary);opacity:.8}.player.collapsed .player-handle{margin-bottom:0}.player.collapsed .player-info,.player.collapsed .controls,.player.collapsed .loop-panel,.player.collapsed .seek-time,.player.collapsed .seek-bar,.player.collapsed .mini-speed,.player.collapsed #downloadSurahBtn,.player.collapsed #downloadAnotherReciterBtn,.player.collapsed .download-status{visibility:hidden;pointer-events:none}.player-info{text-align:center;font-weight:bold;margin-bottom:10px;line-height:1.9}.player-info small{display:block;opacity:.7;font-weight:normal}.controls{display:flex;align-items:center;justify-content:center;gap:13px}.control{width:42px;height:42px;border-radius:50%;border:2px solid var(--primary);background:transparent;color:var(--primary);font-size:17px;cursor:pointer}.play{width:53px;height:53px;border:0;border-radius:50%;background:var(--primary);color:white;font-size:22px;cursor:pointer}.mini-speed{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:8px;font-size:11px;color:var(--text)}.mini-speed input{width:90px;accent-color:var(--primary)}.mini-speed strong{min-width:27px;text-align:center;color:var(--primary)}.seek-time{display:flex;justify-content:space-between;direction:ltr;font-size:11px;opacity:.75;margin-top:7px;font-variant-numeric:tabular-nums}.seek-bar{display:block;width:100%;height:18px;margin:0;accent-color:var(--primary);direction:ltr;cursor:pointer}.progress{height:6px;background:var(--border);border-radius:10px;overflow:hidden;margin-top:12px}.progress-fill{height:100%;width:0;background:var(--primary)}.loop-panel{margin-top:7px;padding:8px 10px;border:1px solid var(--border);border-radius:11px;background:var(--bg);font-size:11px}.loop-title{text-align:center;color:var(--primary);font-weight:bold;margin-bottom:5px}.loop-times,.loop-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px}.loop-times{font-variant-numeric:tabular-nums}.loop-times b{direction:ltr;display:inline-block}.loop-actions{display:flex;gap:6px;margin:5px 0}.loop-actions .btn{flex:1;margin:0;padding:7px 5px;font-size:10px}.loop-bottom label{display:flex;align-items:center;gap:5px;font-weight:bold}.loop-bottom input{accent-color:var(--primary)}.loop-clear{border:0;background:transparent;color:var(--primary);font-size:11px;padding:5px}.loop-panel small{display:block;text-align:center;opacity:.7;margin-top:3px}.download-status{font-size:12px;text-align:center;margin-top:9px;color:var(--primary);line-height:1.8}.setting{margin:18px 0}.setting label{display:block;font-weight:bold;margin-bottom:9px}.setting input[type=range]{width:100%;accent-color:var(--primary)}.toggle-row{display:flex;justify-content:space-between;padding:12px 0;font-weight:bold}.switch{width:48px;height:26px;position:relative}.switch input{display:none}.slider{position:absolute;inset:0;background:#888;border-radius:30px;cursor:pointer}.slider:before{content:"";position:absolute;width:20px;height:20px;right:3px;top:3px;background:white;border-radius:50%;transition:.2s}.switch input:checked+.slider{background:var(--primary)}.switch input:checked+.slider:before{transform:translateX(-22px)}.loading{text-align:center;padding:25px 8px;line-height:2.2;color:var(--primary)}.note{text-align:center;font-size:12px;line-height:2;opacity:.7;margin:12px 0}.toast{position:fixed;bottom:95px;left:50%;transform:translateX(-50%);background:#26352b;color:white;padding:12px 17px;border-radius:12px;font-size:13px;opacity:0;pointer-events:none;transition:.25s;z-index:20;max-width:90%;text-align:center}.toast.show{opacity:1}.footer{text-align:center;font-size:12px;opacity:.6;padding:20px}.hidden{display:none!important}.reciter-picker{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:100;display:flex;align-items:center;justify-content:center;padding:18px}.reciter-picker-card{width:100%;max-width:430px;max-height:80vh;overflow:auto;background:var(--card);color:var(--text);border-radius:18px;padding:18px;box-shadow:0 8px 30px rgba(0,0,0,.25)}.reciter-option{width:100%;text-align:right;padding:13px;margin:5px 0;border:1px solid var(--border);border-radius:12px;background:var(--bg);color:var(--text);font-weight:bold}.reciter-option small{display:block;font-weight:normal;opacity:.7;margin-top:4px}
+:root{--bg:#f3f5ef;--card:#fff;--text:#202820;--primary:#237548;--light:#e5f3e9;--border:#dce5dc;--shadow:rgba(0,0,0,.08)}body.dark{--bg:#101914;--card:#1b2921;--text:#edf5ed;--primary:#65c98c;--light:#294535;--border:#34463a;--shadow:rgba(0,0,0,.3)}*{box-sizing:border-box;margin:0;padding:0}body{font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);padding:14px;transition:.2s}button,input,select{font:inherit}.container{max-width:900px;margin:auto}.page{display:none}.page.active{display:block;animation:fade .2s}@keyframes fade{from{opacity:.5}to{opacity:1}}.header{text-align:center;padding:28px 10px;position:relative}.logo{font-size:48px;margin-bottom:10px}.header h1{font-size:27px;color:var(--primary);margin-bottom:10px}.header p,.muted{font-size:13px;opacity:.7}.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px;margin-bottom:15px;box-shadow:0 4px 15px var(--shadow)}.btn{width:100%;padding:15px;border:0;border-radius:13px;background:var(--primary);color:white;font-weight:bold;margin:5px 0;cursor:pointer}.btn.secondary{background:transparent;color:var(--primary);border:1.5px solid var(--primary)}.btn.small{width:auto;padding:9px 12px;font-size:13px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0 18px}.topbar h2{font-size:21px;color:var(--primary)}.back{padding:9px 12px;border-radius:10px;border:1px solid var(--primary);background:var(--card);color:var(--primary);font-weight:bold;cursor:pointer}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.row>*{flex:1}.search,select{width:100%;padding:13px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text)}.surah-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:9px;margin-top:12px}.surah-item{display:flex;align-items:center;gap:10px;text-align:right;padding:13px;border:1px solid var(--border);border-radius:12px;background:var(--card);color:var(--text);cursor:pointer}.surah-item:active{background:var(--light)}.surah-num{width:34px;height:34px;border-radius:50%;background:var(--light);color:var(--primary);display:grid;place-items:center;font-size:13px;flex-shrink:0}.surah-meta{font-size:11px;opacity:.65;margin-top:4px}.surah-title{text-align:center;color:var(--primary);font-size:24px;margin:18px 0}.bismillah{text-align:center;font-size:25px;line-height:2;margin:14px 0}.quran-text{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px;line-height:2.5;max-height:58vh;overflow:auto}.ayah{display:inline;border-radius:7px;padding:3px;transition:.2s;cursor:pointer;-webkit-tap-highlight-color:rgba(35,117,72,.18);touch-action:manipulation}.ayah.active{background:var(--light);outline:2px solid var(--primary)}.ayah-number{display:inline-grid;place-items:center;width:29px;height:29px;border-radius:50%;background:var(--primary);color:white;font-size:12px;margin:0 5px;vertical-align:middle;cursor:pointer}.ayah-number.active{background:#e99a22}.translation,.tafsir{display:none;background:var(--light);border-radius:10px;padding:10px 12px;margin:6px 0 12px;font-size:15px;line-height:2.1;white-space:normal}.translation.show,.tafsir.show{display:block}.translation small,.tafsir small{display:block;font-size:11px;opacity:.7;margin-top:5px}.ayah-tools{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}.player{position:fixed;left:14px;right:14px;bottom:10px;width:calc(100% - 28px);max-width:872px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:17px;padding:10px 13px 13px;box-shadow:0 4px 20px var(--shadow);z-index:30;transition:transform .28s ease;touch-action:pan-y}.player.collapsed{transform:translateY(calc(100% - 23px))}.player-handle{height:17px;width:100%;display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:none;margin:-5px 0 5px}.player-handle:after{content:"";width:48px;height:5px;border-radius:8px;background:var(--border);border:1px solid var(--primary);opacity:.8}.player.collapsed .player-handle{margin-bottom:0}.player.collapsed .player-info,.player.collapsed .controls,.player.collapsed .loop-panel,.player.collapsed .seek-time,.player.collapsed .seek-bar,.player.collapsed .mini-speed,.player.collapsed #downloadSurahBtn,.player.collapsed #downloadAnotherReciterBtn,.player.collapsed .download-status{visibility:hidden;pointer-events:none}.player-info{text-align:center;font-weight:bold;margin-bottom:10px;line-height:1.9}.player-info small{display:block;opacity:.7;font-weight:normal}.controls{display:flex;align-items:center;justify-content:center;gap:13px}.control{width:42px;height:42px;border-radius:50%;border:2px solid var(--primary);background:transparent;color:var(--primary);font-size:17px;cursor:pointer}.play{width:53px;height:53px;border:0;border-radius:50%;background:var(--primary);color:white;font-size:22px;cursor:pointer}.mini-speed{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:8px;font-size:11px;color:var(--text)}.mini-speed input{width:90px;accent-color:var(--primary)}.mini-speed strong{min-width:27px;text-align:center;color:var(--primary)}.seek-time{display:flex;justify-content:space-between;direction:ltr;font-size:11px;opacity:.75;margin-top:7px;font-variant-numeric:tabular-nums}.seek-bar{display:block;width:100%;height:18px;margin:0;accent-color:var(--primary);direction:ltr;cursor:pointer}.progress{height:6px;background:var(--border);border-radius:10px;overflow:hidden;margin-top:12px}.progress-fill{height:100%;width:0;background:var(--primary)}.loop-panel{margin-top:7px;padding:8px 10px;border:1px solid var(--border);border-radius:11px;background:var(--bg);font-size:11px}.loop-title{text-align:center;color:var(--primary);font-weight:bold;margin-bottom:5px}.loop-times,.loop-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px}.loop-times{font-variant-numeric:tabular-nums}.loop-times b{direction:ltr;display:inline-block}.loop-actions{display:flex;gap:6px;margin:5px 0}.loop-actions .btn{flex:1;margin:0;padding:7px 5px;font-size:10px}.loop-bottom label{display:flex;align-items:center;gap:5px;font-weight:bold}.loop-bottom input{accent-color:var(--primary)}.loop-clear{border:0;background:transparent;color:var(--primary);font-size:11px;padding:5px}.loop-panel small{display:block;text-align:center;opacity:.7;margin-top:3px}.download-status{font-size:12px;text-align:center;margin-top:9px;color:var(--primary);line-height:1.8}.setting{margin:18px 0}.setting label{display:block;font-weight:bold;margin-bottom:9px}.setting input[type=range]{width:100%;accent-color:var(--primary)}.toggle-row{display:flex;justify-content:space-between;padding:12px 0;font-weight:bold}.switch{width:48px;height:26px;position:relative}.switch input{display:none}.slider{position:absolute;inset:0;background:#888;border-radius:30px;cursor:pointer}.slider:before{content:"";position:absolute;width:20px;height:20px;right:3px;top:3px;background:white;border-radius:50%;transition:.2s}.switch input:checked+.slider{background:var(--primary)}.switch input:checked+.slider:before{transform:translateX(-22px)}.loading{text-align:center;padding:25px 8px;line-height:2.2;color:var(--primary)}.note{text-align:center;font-size:12px;line-height:2;opacity:.7;margin:12px 0}.toast{position:fixed;bottom:95px;left:50%;transform:translateX(-50%);background:#26352b;color:white;padding:12px 17px;border-radius:12px;font-size:13px;opacity:0;pointer-events:none;transition:.25s;z-index:20;max-width:90%;text-align:center}.toast.show{opacity:1}.footer{text-align:center;font-size:12px;opacity:.6;padding:20px}.hidden{display:none!important}.reciter-picker{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:100;display:flex;align-items:center;justify-content:center;padding:18px}.reciter-picker-card{width:100%;max-width:430px;max-height:80vh;overflow:auto;background:var(--card);color:var(--text);border-radius:18px;padding:18px;box-shadow:0 8px 30px rgba(0,0,0,.25)}.reciter-option{width:100%;text-align:right;padding:13px;margin:5px 0;border:1px solid var(--border);border-radius:12px;background:var(--bg);color:var(--text);font-weight:bold}.reciter-option small{display:block;font-weight:normal;opacity:.7;margin-top:4px}
 /* صفحه نخست: گزینه‌ها به‌صورت ستونی و با قلم خوانای فارسی */
 .home-grid{display:flex;flex-direction:column;gap:10px;padding:18px;}
 .home-grid .btn{display:block;width:100%;margin:0;min-height:54px;padding:13px 16px;font-family:'Vazirmatn','Noto Naskh Arabic','Noto Sans Arabic',Tahoma,sans-serif;font-size:16px;font-weight:700;letter-spacing:0;line-height:1.7;border-radius:14px;}
@@ -58,8 +58,52 @@ body,button,input,select{font-family:'Vazirmatn','Noto Sans Arabic',Tahoma,Arial
 
 
 .azkar-choice{display:grid;grid-template-columns:1fr 1fr;gap:12px;direction:ltr;margin:18px 0}.azkar-choice .btn{min-height:86px;font-size:18px;border-radius:18px}.azkar-panel[hidden]{display:none!important}.azkar-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px;direction:ltr;align-items:start}.azkar-panel{direction:rtl;min-width:0;background:var(--card);border:1px solid var(--border);border-radius:18px;padding:14px;box-shadow:0 4px 15px var(--shadow)}.azkar-panel .section-title{text-align:center;margin-top:8px}.azkar-panel .arabic-line{text-align:right;font-size:18px;line-height:2.25;overflow-wrap:anywhere}.azkar-panel .lesson{margin:10px 0;padding:13px}.azkar-panel .lesson b{color:var(--primary)}@media(max-width:700px){.azkar-columns{grid-template-columns:1fr}.azkar-panel{width:100%}}
+
+/* زیباسازی قلم و دکمه‌های صفحه نخست */
+.home-grid .btn{
+  font-family:'Vazirmatn','Noto Sans Arabic',Tahoma,sans-serif;
+  font-size:16.5px;
+  font-weight:800;
+  line-height:1.9;
+  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:13px 17px;
+  min-height:59px;
+  border-radius:17px;
+  text-shadow:0 1px 1px rgba(0,0,0,.08);
+  -webkit-font-smoothing:antialiased;
+}
+.home-grid .btn:first-child{
+  background:linear-gradient(135deg,#2f9660,#17623c);
+  color:#fff;
+  box-shadow:0 6px 16px rgba(23,98,60,.22);
+}
+.home-grid .btn.secondary{
+  background:linear-gradient(135deg,var(--card),var(--light));
+  color:var(--primary);
+  border:1px solid rgba(35,117,72,.28);
+  box-shadow:0 3px 10px var(--shadow);
+  text-shadow:none;
+}
+.home-grid .btn:active{transform:translateY(1px) scale(.985);}
+@media(max-width:420px){.home-grid .btn{font-size:15.5px;min-height:56px;padding:12px 13px}}
+
+
+/* نشانگر شیشه‌ای پیشرفت ذخیره آفلاین */
+.offline-glass-btn{position:absolute;left:10px;top:12px;width:44px;height:44px;border:1px solid var(--border);border-radius:13px;background:var(--card);display:grid;place-items:center;padding:4px;cursor:pointer;box-shadow:0 2px 8px var(--shadow);z-index:2}
+.offline-glass-btn:active{transform:scale(.94)}
+.offline-glass-btn svg{width:34px;height:34px;overflow:visible}
+.offline-glass-btn .glass-outline{fill:none;stroke:var(--primary);stroke-width:2.2;stroke-linejoin:round}
+.offline-glass-btn .sand{fill:#d9a441;transition:y .35s,height .35s}
+.offline-glass-btn .sand-top{fill:#d9a441;opacity:.85}
+.offline-glass-btn .glass-stream{stroke:#d9a441;stroke-width:1.8;stroke-linecap:round;stroke-dasharray:2 2}
+.offline-glass-btn.done{border-color:var(--primary);background:var(--light)}
+#downloadQuranTextBtn,#offlineTextStatus{display:none!important}
 </style></head><body><div class="container">
-<section id="menu" class="page active"><div class="header"><div class="logo">📖</div><h1>قرآن کریم</h1><p>آرامش دل‌ها با یاد خداوند</p></div><div class="card home-grid"><button class="btn" onclick="openSurahList()">📖 فهرست ۱۱۴ سوره</button><button class="btn secondary" onclick="openSettings()">⚙️ تنظیمات</button><button class="btn secondary" onclick="resumeLast()">▶ ادامه آخرین قرائت</button><button class="btn secondary" onclick="showPage('tasbih')">📿 ذکرشمار</button><button class="btn secondary" onclick="showPage('azkar')">🌅 اذکار صبح و شب</button><button class="btn secondary" onclick="showPage('tajweed')">📚 آموزش قواعد قرآن</button><button class="btn secondary" onclick="showPage('guide')">🎧 آموزش کار با برنامه قرآن صوتی</button><button class="btn secondary" onclick="showPage('about')">ℹ️ درباره سازنده</button></div><p class="note">برای نمایش آیات، یک‌بار اینترنت را روشن کنید. برای استفاده آفلاین، هنگام اتصال اینترنت سوره و صوت قاری دلخواه را دانلود کنید.</p></section>
+<section id="menu" class="page active"><div class="header"><button type="button" class="offline-glass-btn" id="offlineGlassBtn" onclick="downloadAllQuranText()" aria-label="وضعیت ذخیره آفلاین قرآن" title="ذخیره خودکار متن و ترجمه قرآن"><svg viewBox="0 0 40 40" role="img" aria-hidden="true"><defs><clipPath id="bottomChamber"><path d="M13 22 Q20 27 27 22 L27 34 Q20 37 13 34Z"/></clipPath><clipPath id="topChamber"><path d="M13 6 L27 6 Q27 13 20 18 Q13 13 13 6Z"/></clipPath></defs><path class="glass-outline" d="M10 4 H30 Q30 12 20 19 Q30 26 30 36 H10 Q10 26 20 19 Q10 12 10 4Z"/><rect id="offlineSandBottom" class="sand" x="13" y="34" width="14" height="0" clip-path="url(#bottomChamber)"/><path id="offlineSandTop" class="sand-top" d="M13 6 H27 Q25 12 20 16 Q15 12 13 6Z" clip-path="url(#topChamber)"/><path class="glass-outline" d="M10 4 H30 M10 36 H30"/></svg></button><div class="logo">📖</div><h1>قرآن کریم</h1><p>آرامش دل‌ها با یاد خداوند</p></div><div class="card home-grid"><button class="btn" onclick="openSurahList()">📖 فهرست ۱۱۴ سوره</button><button class="btn secondary" onclick="openSettings()">⚙️ تنظیمات</button><button class="btn secondary" onclick="resumeLast()">▶ ادامه آخرین قرائت</button><button class="btn secondary" onclick="showPage('tasbih')">📿 ذکرشمار</button><button class="btn secondary" onclick="showPage('azkar')">🌅 اذکار صبح و شب</button><button class="btn secondary" onclick="showPage('tajweed')">📚 آموزش قواعد قرآن</button><button class="btn secondary" onclick="showPage('guide')">🎧 آموزش کار با برنامه قرآن صوتی</button><button class="btn secondary" id="downloadQuranTextBtn" onclick="downloadAllQuranText()">⬇️ ذخیره متن و ترجمه قرآن برای استفاده آفلاین</button><div id="offlineTextStatus" class="note" aria-live="polite">برای استفاده بدون اینترنت، یک‌بار این گزینه را با اینترنت اجرا کنید.</div><button class="btn secondary" onclick="showPage('about')">ℹ️ درباره سازنده</button></div><p class="note">متن و ترجمه قرآن به‌صورت خودکار برای استفاده آفلاین ذخیره می‌شوند. صوت هر سوره جداگانه دانلود می‌شود.</p></section>
 <section id="surahList" class="page"><div class="topbar"><h2>فهرست سوره‌ها</h2><button class="back" onclick="showPage('menu')">بازگشت</button></div><input id="surahSearch" class="search" placeholder="جست‌وجوی نام یا شماره سوره..." oninput="filterSurahs()"><div id="surahListBox" class="surah-list"><div class="loading">در حال دریافت فهرست سوره‌ها...</div></div></section>
 <section id="reader" class="page"><div class="topbar reader-topbar"><div class="reader-actions"><button class="back" onclick="openSettings()">⚙️ تنظیمات</button><button class="back" onclick="openSurahList()">↩ بازگشت</button><button class="meaning-toggle" onclick="toggleAllTranslations()">📖 نمایش / مخفی معنی</button></div></div><h3 id="surahArabicTitle" class="surah-title"></h3><div id="bismillah" class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div><div id="quranText" class="quran-text"><div class="loading">در حال دریافت آیات...</div></div><div class="player" id="audioPlayer"><div class="player-handle" id="playerHandle" role="button" aria-label="باز و بسته کردن نوار پخش" title="برای جمع‌کردن به پایین بکشید؛ برای بازکردن به بالا بکشید"></div><div class="player-info"><span id="reciterName">مشاری العفاسی</span><small id="ayahInfo">آیه ۱</small></div><div class="controls"><button class="control" id="prevBtn">⏮</button><button class="play" id="playBtn">▶</button><button class="control" id="nextBtn">⏭</button></div><div class="mini-speed"><span>سرعت</span><input type="range" id="miniSpeed" min="0.5" max="2" step="0.1" value="1" aria-label="سرعت پخش"><strong id="miniSpeedValue">۱×</strong></div><div class="seek-time"><span id="currentTime">00:00</span><span id="durationTime">00:00</span></div><input id="seekBar" class="seek-bar" type="range" min="0" max="1000" step="1" value="0" aria-label="جلو و عقب بردن صوت"><div class="loop-panel" id="loopPanel"><div class="loop-title">🔁 تکرار بخشی از تلاوت</div><div class="loop-times"><span>شروع: <b id="loopStartText">--:--</b></span><span>پایان: <b id="loopEndText">--:--</b></span></div><div class="loop-actions"><button type="button" class="btn small secondary" id="setLoopStart">تعیین شروع از زمان فعلی</button><button type="button" class="btn small secondary" id="setLoopEnd">تعیین پایان از زمان فعلی</button></div><div class="loop-bottom"><label><input type="checkbox" id="loopEnabled"> تکرار این بازه</label><button type="button" class="loop-clear" id="clearLoop">پاک‌کردن</button></div><small id="loopStatus">پخش را به زمان دلخواه ببرید و شروع و پایان را ثبت کنید.</small></div><button class="btn small secondary" id="downloadSurahBtn" style="width:100%;margin-top:12px">⬇️ دانلود صوت این سوره</button><button class="btn small secondary hidden" id="downloadAnotherReciterBtn" style="width:100%;margin-top:8px">🎙 دانلود قاری دیگر</button><div id="downloadProgressWrap" class="progress hidden" style="margin-top:9px"><div class="progress-fill" id="downloadProgressFill"></div></div><div id="reciterPicker" class="reciter-picker hidden" role="dialog" aria-modal="true" aria-label="انتخاب قاری"><div class="reciter-picker-card"><h3 style="color:var(--primary);margin-bottom:8px">انتخاب قاری برای دانلود</h3><p class="note">روی نام قاری بزنید تا صوت همین سوره دانلود شود.</p><div id="reciterOptions"></div><button class="btn secondary" onclick="closeReciterPicker()">انصراف</button></div></div><div class="download-status" id="downloadStatus">صوت آیات برای قاری انتخاب‌شده ذخیره می‌شود و پس از تکمیل، آفلاین پخش خواهد شد.</div><div id="downloadComplete" class="download-status hidden" style="font-weight:bold">✅ دانلود شد؛ این سوره آماده پخش آفلاین است.</div></div><p class="note">برای پخش فوری هر آیه، روی شماره آن ضربه بزنید. پس از دانلود کامل صوت سوره، همان سوره بدون اینترنت پخش می‌شود.</p></section>
 <section id="tasbih" class="page"><div class="topbar"><h2>📿 ذکرشمار</h2><button class="back" onclick="showPage('menu')">بازگشت</button></div><div class="card tasbih-card"><label for="dhikrChoice"><b>انتخاب ذکر</b></label><select id="dhikrChoice" onchange="changeDhikr()"><option>سبحان الله</option><option>الحمد لله</option><option>الله أكبر</option><option>لا إله إلا الله</option><option>أستغفر الله</option><option>اللهم صل وسلم على نبينا محمد</option><option>ذکر دلخواه</option></select><input id="customDhikr" class="search hidden" style="margin-top:10px" placeholder="ذکر دلخواه خود را بنویسید" oninput="saveTasbih()"><button type="button" class="tasbih-count" id="tasbihCount" onclick="countDhikr()" aria-label="برای شمردن ذکر لمس کنید"><span class="tasbih-number">۰</span><small>برای ذکر گفتن لمس کن</small></button><div class="tasbih-goal"><span>🎯 هدف: <b id="tasbihTargetText">۱۰۰</b> مرتبه</span><span>📿 ذکرشمار</span></div><div class="progress tasbih-progress"><div class="progress-fill" id="tasbihProgress"></div></div><div class="row" style="margin-top:15px"><button class="btn" onclick="countDhikr()">📿 شمارش ذکر</button><button class="btn secondary" onclick="resetTasbih()">↺ شروع دوباره</button></div><label for="tasbihTarget" style="display:block;margin-top:14px">تعیین هدف</label><select id="tasbihTarget" onchange="saveTasbih()"><option value="33">۳۳ مرتبه</option><option value="100" selected>۱۰۰ مرتبه</option><option value="1000">۱۰۰۰ مرتبه</option></select></div><p class="note">شمارش به‌صورت خودکار روی همین دستگاه ذخیره می‌شود.</p></section>
@@ -94,7 +138,104 @@ let loopStart=null,loopEnd=null,loopEnabled=false;
 let surahs=[],ayahs=[],audio=null,previousPage='reader',loadedSurah=0,requestNo=0,toastTimer=null,translationData=[],tafsirKey=null,tafsirTitle='';
 function fa(n){return String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[+d])}function save(){try{localStorage.setItem('quran_site_state',JSON.stringify(state))}catch(e){}}function load(){try{let x=JSON.parse(localStorage.getItem('quran_site_state')||'{}');Object.assign(state,x);if(!RECITERS[state.reciter])state.reciter='ar.alafasy';if(!['none','ayah','surah'].includes(state.repeatMode))state.repeatMode='none';state.repeatCount=[1,2,3,4,5].includes(Number(state.repeatCount))?Number(state.repeatCount):3}catch(e){}}
 function toast(t){let e=document.getElementById('toast');e.textContent=t;e.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>e.classList.remove('show'),2800)}function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0)}function openSettings(){let p=document.querySelector('.page.active');if(p&&p.id!=='settings')previousPage=p.id;/* پخش صوت عمداً متوقف نمی‌شود. */showPage('settings')}function backFromSettings(){showPage(previousPage)}
-async function getJSON(url){let r=await fetch(url);if(!r.ok)throw Error('HTTP '+r.status);return r.json()}
+// نگهداری پاسخ‌های متنی قرآن و ترجمه در IndexedDB؛ پس از یک‌بار دریافت، بدون اینترنت هم خوانده می‌شوند.
+const QURAN_TEXT_DB='quran_text_offline_v1',QURAN_TEXT_STORE='responses';
+let quranTextDbPromise=null;
+function openQuranTextDB(){
+ if(!('indexedDB' in window))return Promise.reject(Error('مرورگر از ذخیره‌سازی آفلاین پشتیبانی نمی‌کند'));
+ if(!quranTextDbPromise)quranTextDbPromise=new Promise((resolve,reject)=>{
+  const req=indexedDB.open(QURAN_TEXT_DB,1);
+  req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains(QURAN_TEXT_STORE))req.result.createObjectStore(QURAN_TEXT_STORE)};
+  req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);
+ });
+ return quranTextDbPromise;
+}
+async function readTextCache(url){
+ try{const db=await openQuranTextDB();return await new Promise((resolve,reject)=>{const r=db.transaction(QURAN_TEXT_STORE,'readonly').objectStore(QURAN_TEXT_STORE).get(url);r.onsuccess=()=>resolve(r.result||null);r.onerror=()=>reject(r.error)})}catch(e){return null}
+}
+async function writeTextCache(url,data){
+ const db=await openQuranTextDB();
+ await new Promise((resolve,reject)=>{const tx=db.transaction(QURAN_TEXT_STORE,'readwrite');tx.objectStore(QURAN_TEXT_STORE).put(data,url);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error||Error('ذخیره در حافظه ناموفق بود'));tx.onabort=()=>reject(tx.error||Error('ذخیره در حافظه لغو شد'))});
+ const saved=await readTextCache(url);
+ if(saved===null)throw Error('تأیید ذخیره در حافظه انجام نشد');
+ return true;
+}
+async function getJSON(url){
+ let responseData;
+ try{
+  const r=await fetch(url);
+  if(!r.ok)throw Error('HTTP '+r.status);
+  responseData=await r.json();
+ }catch(networkError){
+  const cached=await readTextCache(url);
+  if(cached!==null)return cached;
+  throw networkError;
+ }
+ await writeTextCache(url,responseData);
+ return responseData;
+}
+async function verifyAllQuranTextCached(){
+ const list=await readTextCache(API+'/surah');
+ if(!list||!Array.isArray(list.data)||list.data.length!==114)return false;
+ for(const surah of list.data){
+  if(await readTextCache(API+'/surah/'+surah.number+'/quran-uthmani')===null)return false;
+  if(await readTextCache('https://quranenc.com/api/v1/translation/sura/'+PERSIAN_TRANSLATION_KEY+'/'+surah.number)===null)return false;
+ }
+ return true;
+}
+function updateOfflineGlass(percent,mode='loading',message=''){
+ const bottom=document.getElementById('offlineSandBottom'),top=document.getElementById('offlineSandTop'),btn=document.getElementById('offlineGlassBtn');
+ const p=Math.max(0,Math.min(100,Number(percent)||0));
+ if(bottom){const h=12*p/100;bottom.setAttribute('y',String(34-h));bottom.setAttribute('height',String(h));}
+ if(top){const h=10*(1-p/100);top.setAttribute('d',`M13 6 H27 Q25 ${6+h*.65} 20 ${6+h} Q15 ${6+h*.65} 13 6Z`);}
+ if(btn){
+  const completed = mode === 'done';
+  btn.classList.toggle('done', completed);
+  if(completed){
+   btn.innerHTML='<svg viewBox="0 0 40 40" role="img" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="none" stroke="var(--primary)" stroke-width="3"/><path d="M11 20.5 L17.2 26.5 L29.5 13.5" fill="none" stroke="var(--primary)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  }else if(!document.getElementById('offlineSandBottom')){
+   btn.innerHTML='<svg viewBox="0 0 40 40" role="img" aria-hidden="true"><defs><clipPath id="bottomChamber"><path d="M13 22 Q20 27 27 22 L27 34 Q20 37 13 34Z"/></clipPath><clipPath id="topChamber"><path d="M13 6 L27 6 Q27 13 20 18 Q13 13 13 6Z"/></clipPath></defs><path class="glass-outline" d="M10 4 H30 Q30 12 20 19 Q30 26 30 36 H10 Q10 26 20 19 Q10 12 10 4Z"/><rect id="offlineSandBottom" class="sand" x="13" y="34" width="14" height="0" clip-path="url(#bottomChamber)"/><path id="offlineSandTop" class="sand-top" d="M13 6 H27 Q25 12 20 16 Q15 12 13 6Z" clip-path="url(#topChamber)"/><path class="glass-outline" d="M10 4 H30 M10 36 H30"/></svg>';
+  }
+  btn.title=message||(completed?'متن و ترجمه ۱۱۴ سوره ذخیره شده است':mode==='offline'?'با اتصال اینترنت، ذخیره خودکار آغاز می‌شود':`ذخیره آفلاین قرآن: ${fa(Math.round(p))}٪`);
+  btn.setAttribute('aria-label',btn.title);
+ }
+}
+let quranTextDownloadRunning=false;
+async function downloadAllQuranText(){
+ if(quranTextDownloadRunning)return;
+ const btn=document.getElementById('downloadQuranTextBtn'),status=document.getElementById('offlineTextStatus');
+ if(!btn||!status)return;
+ if(!navigator.onLine){toast('برای دانلود اولیه متن قرآن، اینترنت را روشن کنید.');return}
+ quranTextDownloadRunning=true;btn.disabled=true;btn.textContent='⏳ در حال ذخیره متن قرآن...';updateOfflineGlass(0,'loading','در حال ذخیره متن و ترجمه قرآن...');
+ let done=0,failed=[];
+ try{
+  // دریافت فهرست سوره‌ها نیز در حافظه محلی ذخیره می‌شود.
+  const list=await getJSON(API+'/surah');
+  const all=list.data||[];
+  if(all.length!==114)throw Error('فهرست کامل سوره‌ها دریافت نشد');
+  for(const surah of all){
+   status.textContent='در حال ذخیره سوره '+fa(surah.number)+' از ۱۱۴ ...';updateOfflineGlass((done/114)*100,'loading','در حال ذخیره سوره '+fa(surah.number)+' از ۱۱۴');
+   try{
+    await getJSON(API+'/surah/'+surah.number+'/quran-uthmani');
+    await getJSON('https://quranenc.com/api/v1/translation/sura/'+PERSIAN_TRANSLATION_KEY+'/'+surah.number);
+    done++;
+   }catch(e){failed.push(surah.number)}
+   btn.textContent='⏳ '+fa(done)+' از ۱۱۴ سوره ذخیره شد';updateOfflineGlass((done/114)*100,'loading',fa(done)+' از ۱۱۴ سوره ذخیره شد');
+  }
+  if(failed.length){
+   status.textContent='ذخیره '+fa(done)+' سوره انجام شد؛ '+fa(failed.length)+' سوره ناموفق بود. اینترنت را بررسی و دوباره تلاش کنید.';updateOfflineGlass((done/114)*100,'loading','ذخیره '+fa(done)+' سوره؛ '+fa(failed.length)+' سوره ناموفق');
+   toast('ذخیره متن بعضی سوره‌ها ناموفق بود.');
+  }else if(await verifyAllQuranTextCached()){
+   status.textContent='✅ متن عربی و ترجمه فارسی هر ۱۱۴ سوره با موفقیت در حافظه گوشی ذخیره و بررسی شد.';updateOfflineGlass(100,'done','متن و ترجمه هر ۱۱۴ سوره ذخیره و بررسی شده است');
+   try{localStorage.setItem('quran_text_auto_download_complete','1')}catch(e){}
+   toast('ذخیره آفلاین متن و ترجمه هر ۱۱۴ سوره کامل شد.');
+  }else{
+   status.textContent='دریافت انجام شد، اما تأیید ذخیره همه متن‌ها در حافظه ممکن نشد؛ لطفاً دوباره تلاش کنید.';updateOfflineGlass(99,'loading','ذخیره کامل در حافظه هنوز تأیید نشده است');
+   try{localStorage.removeItem('quran_text_auto_download_complete')}catch(e){}
+  }
+ }catch(e){status.textContent='ذخیره‌سازی انجام نشد. اینترنت را بررسی کنید و دوباره تلاش کنید.';updateOfflineGlass(0,'offline','ذخیره‌سازی ناموفق بود؛ برای تلاش دوباره شیشه را لمس کنید.');toast('خطا در دریافت اطلاعات قرآن.')}
+ finally{quranTextDownloadRunning=false;btn.disabled=false;btn.textContent='⬇️ ذخیره متن و ترجمه قرآن برای استفاده آفلاین'}
+}
 async function openSurahList(){showPage('surahList');if(!surahs.length)await loadSurahList()}
 async function loadSurahList(){let box=document.getElementById('surahListBox');box.innerHTML='<div class="loading">در حال دریافت فهرست سوره‌ها...</div>';try{let j=await getJSON(API+'/surah');surahs=j.data||[];renderSurahList()}catch(e){box.innerHTML='<div class="loading">دریافت فهرست ناموفق بود. اینترنت را بررسی و دوباره تلاش کنید.<br><button class="btn" onclick="loadSurahList()">تلاش دوباره</button></div>'}}
 function renderSurahList(list=surahs){let box=document.getElementById('surahListBox');box.innerHTML='';list.forEach(s=>{let b=document.createElement('button');b.className='surah-item';b.innerHTML=`<span class="surah-num">${fa(s.number)}</span><span><b>${escapeHTML(s.name)}</b><div class="surah-meta">${escapeHTML(s.englishName)} · ${fa(s.numberOfAyahs)} آیه · ${s.revelationType==='Meccan'?'مکی':'مدنی'}</div></span>`;b.onclick=()=>loadSurah(s.number);box.appendChild(b)})}function filterSurahs(){let q=document.getElementById('surahSearch').value.trim().toLowerCase();renderSurahList(surahs.filter(s=>String(s.number).includes(q)||s.name.includes(q)||s.englishName.toLowerCase().includes(q)))}function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
@@ -344,7 +485,27 @@ if('serviceWorker' in navigator){
         navigator.serviceWorker.register('./service-worker.js').catch(err=>console.warn('Service worker:',err));
     });
 }
- document.addEventListener('DOMContentLoaded',init);
+ document.addEventListener('DOMContentLoaded',async()=>{
+   init();
+   updateOfflineGlass(0,navigator.onLine?'loading':'offline',navigator.onLine?'در حال بررسی ذخیره آفلاین قرآن...':'با اتصال اینترنت، ذخیره خودکار آغاز می‌شود');
+   let storedCompletely=false;
+   try{storedCompletely=await verifyAllQuranTextCached()}catch(e){storedCompletely=false}
+   if(storedCompletely){
+     try{localStorage.setItem('quran_text_auto_download_complete','1')}catch(e){}
+     updateOfflineGlass(100,'done','متن و ترجمه هر ۱۱۴ سوره در حافظه بررسی شد');
+     const status=document.getElementById('offlineTextStatus');if(status)status.textContent='متن عربی و ترجمه فارسی هر ۱۱۴ سوره در حافظه گوشی ذخیره است و آفلاین قابل استفاده است.';
+   }else{
+     try{localStorage.removeItem('quran_text_auto_download_complete')}catch(e){}
+     updateOfflineGlass(0,navigator.onLine?'loading':'offline',navigator.onLine?'ذخیره خودکار متن و ترجمه در حال آغاز است':'به محض اتصال اینترنت، ذخیره خودکار آغاز می‌شود');
+     const startAutoDownload=()=>{setTimeout(()=>{if(!quranTextDownloadRunning)downloadAllQuranText()},1200)};
+     if(navigator.onLine)startAutoDownload();
+     else{
+       const status=document.getElementById('offlineTextStatus');
+       if(status)status.textContent='به محض اتصال به اینترنت، ذخیره خودکار متن و ترجمه هر ۱۱۴ سوره آغاز می‌شود.';
+       window.addEventListener('online',startAutoDownload,{once:true});
+     }
+   }
+ });
 </script>
 <script>
 function showAzkarPart(part){
